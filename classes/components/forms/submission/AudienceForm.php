@@ -43,9 +43,9 @@ class AudienceForm extends FormComponent
 
         /** @var ONIXCodelistItemDAO */
         $onixCodelistItemDao = DAORegistry::getDAO('ONIXCodelistItemDAO');
-        $audienceCodes = $this->getOptions($onixCodelistItemDao->getCodes('List28'));
-        $audienceRangeQualifiers = $this->getOptions($onixCodelistItemDao->getCodes('List30'));
-        $audienceRanges = $this->getOptions($onixCodelistItemDao->getCodes('List77'));
+        $audienceCodes = $this->getOptions($onixCodelistItemDao->getCodes('28'));
+        $audienceRangeQualifiers = $this->getOptions($onixCodelistItemDao->getCodes('30'));
+        $audienceRanges = $this->getOptions($onixCodelistItemDao->getCodes('77'));
 
         $this->addField(new FieldSelect('audience', [
             'label' => __('monograph.audience'),
